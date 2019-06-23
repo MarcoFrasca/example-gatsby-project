@@ -14,10 +14,11 @@ module.exports = {
     description:
       "Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure.",
     author: "@johndoe",
+    twitterUsername: "@frasca_marco",
+    image: "/defaultBcg.jpeg",
+    siteUrl: "https://gatsby-tours-proj.netlify.com",
   },
   plugins: [
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,9 +26,6 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -36,5 +34,14 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-playground`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    "gatsby-plugin-robots-txt",
   ],
 }
